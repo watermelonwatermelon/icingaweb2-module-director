@@ -2,21 +2,21 @@
 # Copyright (C) 2016 Icinga Development Team
 # This file is distributed under the same license as Director Module.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Director Module (1.0.0)\n"
 "Report-Msgid-Bugs-To: dev@icinga.org\n"
-"POT-Creation-Date: 2016-04-06 13:10+0200\n"
-"PO-Revision-Date: 2016-04-08 10:53+0200\n"
+"POT-Creation-Date: 2016-04-22 00:15+0200\n"
+"PO-Revision-Date: 2016-04-22 00:11+0200\n"
 "Last-Translator: Thomas Widhalm <widhalmt@widhalm.or.at>\n"
 "Language: de_DE\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:583
 #, php-format
@@ -68,6 +68,11 @@ msgstr "%s \"%s\" wurde erstellt"
 msgid "%s \"%s\" has been deleted"
 msgstr "%s \"%s\" wurde gelöscht"
 
+#: /usr/share/icingaweb2/modules/director/application/forms/IcingaImportObjectForm.php:35
+#, php-format
+msgid "%s \"%s\" has been imported\""
+msgstr "%s \"%s\" wurde importiert\""
+
 #: /usr/share/icingaweb2/modules/director/application/controllers/ShowController.php:170
 #, php-format
 msgid "%s \"%s\" has been modified"
@@ -112,8 +117,8 @@ msgstr ""
 "Kenntnisse über LDAP Filter. Einfache Filter können wie folgt aussehen: "
 "operatingsystem=*server*"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:34
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaObjectFieldForm.php:120
+#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:34
 msgid "A description about the field"
 msgstr "Eine Beschreibung des Feldes"
 
@@ -180,6 +185,7 @@ msgstr "Aktionen"
 
 #: /usr/share/icingaweb2/modules/director/application/controllers/ConfigController.php:89
 #: /usr/share/icingaweb2/modules/director/application/controllers/ConfigController.php:187
+#: /usr/share/icingaweb2/modules/director/application/views/scripts/index/index.phtml:98
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Controller/ActionController.php:110
 msgid "Activity Log"
 msgstr "Aktivitätslog"
@@ -243,20 +249,20 @@ msgstr "Importquelle hinzufügen"
 msgid "Add list"
 msgstr "Liste hinzufügen"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/AssignListSubForm.php:44
+#: /usr/share/icingaweb2/modules/director/application/forms/AssignListSubForm.php:46
 msgid "Add more"
 msgstr "Mehr hinzufügen"
 
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Controller/ObjectController.php:184
 #, php-format
 msgid "Add new Icinga %s"
-msgstr "Neues Icinga %s Objekt hinzufügen"
+msgstr "Neuen Icinga %s hinzufügen"
 
 #: /usr/share/icingaweb2/modules/director/application/controllers/ImportsourceController.php:72
 msgid "Add property modifier"
 msgstr "Eigenschaftsmodifikator hinzufügen"
 
-#: /usr/share/icingaweb2/modules/director/application/controllers/HostController.php:57
+#: /usr/share/icingaweb2/modules/director/application/controllers/HostController.php:58
 msgid "Add service"
 msgstr "Service hinzufügen"
 
@@ -387,17 +393,13 @@ msgstr "Argumente"
 msgid "Assign"
 msgstr "Assign"
 
-#: /usr/share/icingaweb2/modules/director/application/views/scripts/index/index.phtml:98
-msgid "Audit log"
-msgstr "Revisionslog"
-
 #: /usr/share/icingaweb2/modules/director/application/tables/ActivityLogTable.php:62
 #: /usr/share/icingaweb2/modules/director/application/views/scripts/show/activitylog.phtml:33
 msgid "Author"
 msgstr "Autor"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:27
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaObjectFieldForm.php:111
+#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:27
 msgid "Caption"
 msgstr "Überschrift"
 
@@ -427,7 +429,7 @@ msgid "Checksum"
 msgstr "Prüfsumme"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:33
-msgid "Choose a object type"
+msgid "Choose an object type"
 msgstr "Einen Objekttyp auswählen"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaServiceForm.php:111
@@ -539,7 +541,7 @@ msgstr "Konfigurationen"
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:261
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:260
 msgid "Configuration has been stored"
 msgstr "Konfiguration wurde gespeichert"
 
@@ -575,11 +577,11 @@ msgstr "Benutzerdefinierte Variable"
 msgid "Custom variable (vars.)"
 msgstr "Benutzerdefinierte Variable (vars.)"
 
-#: /usr/share/icingaweb2/modules/director/library/Director/Objects/IcingaHost.php:128
+#: /usr/share/icingaweb2/modules/director/library/Director/Objects/IcingaHost.php:129
 msgid "Custom variables"
 msgstr "Benutzerdefinierte Variablen"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:190
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:189
 msgid "DB Resource"
 msgstr "Datenbankressource"
 
@@ -637,7 +639,7 @@ msgstr ""
 msgid "Data type"
 msgstr "Datentyp"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:231
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:230
 msgid "Database backend"
 msgstr "Datenbankbackend"
 
@@ -666,6 +668,17 @@ msgstr "Datenfelder definieren"
 msgid "Define how imported data should be synchronized with Icinga"
 msgstr ""
 "Definieren, wie importierte Daten mit Icinga synchronisiert werden sollen"
+
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:41
+msgid ""
+"Define what should happen when an object with a matching key already exists. "
+"You could merge it's properties (import source wins), replace it completely "
+"with the imported object or ignore it (helpful for one-time imports)"
+msgstr ""
+"Angeben, was geschehen soll wenn ein Objekt mit gleichem Schlüssel bereits "
+"existiert. Die Eigenschaften können zusammengeführt (Importquelle gewinnt), "
+"durch das importierte Objekt ersetzt oder ignoriert (hilfreich für einmalige "
+"Importe) werden"
 
 #: /usr/share/icingaweb2/modules/director/application/views/scripts/index/index.phtml:88
 msgid "Define whatever you want to be monitored"
@@ -726,8 +739,8 @@ msgstr "Deployments"
 msgid "Deployments / History"
 msgstr "Deployments / Historie"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:33
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaObjectFieldForm.php:119
+#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:33
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -867,14 +880,19 @@ msgstr "Verbindung herstellen"
 msgid "Execute active checks"
 msgstr "Aktive Checks ausführen"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:45
-#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:46
+#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:48
+#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:49
 msgid "Expression"
 msgstr "Ausdruck"
 
 #: /usr/share/icingaweb2/modules/director/application/views/scripts/deployment/index.phtml:77
 msgid "Failed"
 msgstr "Fehlgeschlagen"
+
+#: /usr/share/icingaweb2/modules/director/application/forms/IcingaImportObjectForm.php:41
+#, php-format
+msgid "Failed to import %s \"%s\""
+msgstr "Import von %s fehlgeschlagen \"%s\""
 
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaObjectFieldForm.php:147
 msgid "Field has been removed"
@@ -903,7 +921,7 @@ msgid "Filter"
 msgstr "Filter"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/SyncPropertyForm.php:150
-#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:60
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:69
 msgid "Filter Expression"
 msgstr "Filterausdruck"
 
@@ -1007,7 +1025,7 @@ msgstr "Host-Konfigurationen"
 msgid "Host objects"
 msgstr "Hostobjekte"
 
-#: /usr/share/icingaweb2/modules/director/library/Director/Objects/IcingaHost.php:127
+#: /usr/share/icingaweb2/modules/director/library/Director/Objects/IcingaHost.php:128
 msgid "Host properties"
 msgstr "Hosteigenschaften"
 
@@ -1150,6 +1168,10 @@ msgstr "Icinga-2-Objekte: %s"
 msgid "Identifier for the Icinga command you are going to create"
 msgstr "Bezeichner für das Icinga-Kommando, das erstellt werden soll"
 
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:50
+msgid "Ignore"
+msgstr "Ignorieren"
+
 #: /usr/share/icingaweb2/modules/director/configuration.php:40
 msgid "Import / Sync"
 msgstr "Import / Synchronisierung"
@@ -1157,6 +1179,11 @@ msgstr "Import / Synchronisierung"
 #: /usr/share/icingaweb2/modules/director/application/views/scripts/index/index.phtml:104
 msgid "Import data sources"
 msgstr "Import-Datenquellen"
+
+#: /usr/share/icingaweb2/modules/director/application/forms/IcingaImportObjectForm.php:25
+#, php-format
+msgid "Import external \"%s\""
+msgstr "Externe \"%s\" importieren"
 
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Controller/ActionController.php:146
 msgid "Import history"
@@ -1198,6 +1225,21 @@ msgstr ""
 msgid "Imported rows"
 msgstr "Importierte Reihen"
 
+#: /usr/share/icingaweb2/modules/director/application/forms/IcingaImportObjectForm.php:15
+msgid ""
+"Importing an object means that it's type will change from \"external\" to "
+"\"object\". That way it will make part of the next deployment. So in case "
+"you imported this object from your Icinga node make sure to remove it from "
+"your local configuration before issueing the next deployment. In case of a "
+"conflict nothing bad will happen, just your config won't deploy."
+msgstr ""
+"Ein Objekt zu importieren bedeutet, dass es von einem \"externen Objekt\" zu "
+"einem \"Objekt\" verändert wird. Damit wird es mit der nächsten "
+"Konfiguration ausgerollt. Falls dieses Objekt aus dem Icinga Knoten "
+"importiert wurde, muss es aus vor dem nächsten Ausrollen aus der lokalen "
+"Konfiguration entfernt werden. Sollte ein Konflikt auftreten, geschieht "
+"nichts weiter, als dass die Konfiguration nicht ausgerollt werden kann."
+
 #: /usr/share/icingaweb2/modules/director/application/tables/IcingaHostTable.php:42
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:1083
 msgid "Imports"
@@ -1233,7 +1275,7 @@ msgstr "Schlüssel"
 msgid "Key column name"
 msgstr "Schlüsselspaltenname"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:248
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:247
 msgid "Kickstart wizard"
 msgstr "Kickstart Assistent"
 
@@ -1300,6 +1342,10 @@ msgstr "Pflicht"
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:1176
 msgid "Max check attempts"
 msgstr "Maximale Checkwiederholungen"
+
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:48
+msgid "Merge"
+msgstr "Zusammenführen"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/SyncPropertyForm.php:164
 msgid "Merge Policy"
@@ -1379,11 +1425,16 @@ msgstr "Name der Icinga-Zone, die erstellt werden soll"
 msgid "New import source"
 msgstr "Neue Importquelle"
 
+#: /usr/share/icingaweb2/modules/director/application/forms/IcingaCloneObjectForm.php:15
+msgid "New name"
+msgstr "Neuer Name"
+
 #: /usr/share/icingaweb2/modules/director/application/controllers/ShowController.php:51
 msgid "New object"
 msgstr "Neues Objekt"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaZoneForm.php:29
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:64
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:670
 msgid "No"
 msgstr "Nein"
@@ -1408,7 +1459,7 @@ msgstr "Keine Aktion durchgeführt, das Objekt wurde nicht verändert"
 msgid "No database has been configured for Icinga Director"
 msgstr "Keine Datenbank für den Icinga-Director wurde konfiguriert"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:183
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:182
 msgid ""
 "No database resource has been configured yet. Please choose a resource to "
 "complete your config"
@@ -1536,7 +1587,7 @@ msgstr ""
 "Nur setzen, wenn der Wert des Arguments numereisch ist. Zeichenketten als "
 "Wert werden nicht unterstützt"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:30
+#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:33
 msgid "Operator"
 msgstr "Operator"
 
@@ -1589,7 +1640,7 @@ msgstr "Zugriff auf Ressourcen kann durch Administrator gewährt werden"
 msgid "Please choose a data list that can be used for map lookups"
 msgstr "Eine Datenliste auswählen, die für Map lookups verwendet wird"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:201
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:200
 #, php-format
 msgid "Please click %s to create new DB resources"
 msgstr "%s klicken, um neue Datenbankressourcen zu erstellen"
@@ -1599,15 +1650,13 @@ msgstr "%s klicken, um neue Datenbankressourcen zu erstellen"
 msgid "Please click %s to create new resources"
 msgstr "%s klicken, um neue Ressourcen zu erstellen"
 
-# Geschlecht kann leider nicht bestimmt werden -ThW
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:166
-#, php-format
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:165
 msgid ""
-"Please make sure that your database grants enough permissions and that you "
-"deployed the correct %s."
+"Please make sure that your database exists and your user has been granted "
+"enough permissions"
 msgstr ""
-"Überprüfen, ob die Datenbank genug Berechtigungen verleiht und der richtige "
-"%s ausgebracht wurde."
+"Überprüfen, ob die Datenbank existiert und der Benutzer ausreichende "
+"Berechtigungen hat"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:27
 msgid "Please provide a rule name"
@@ -1677,8 +1726,8 @@ msgstr "Performancedaten verarbeiten"
 msgid "Properties"
 msgstr "Eigenschaften"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:25
 #: /usr/share/icingaweb2/modules/director/application/forms/ImportRowModifierForm.php:22
+#: /usr/share/icingaweb2/modules/director/application/forms/AssignmentSubForm.php:28
 #: /usr/share/icingaweb2/modules/director/application/tables/PropertymodifierTable.php:36
 msgid "Property"
 msgstr "Eigenschaft"
@@ -1695,13 +1744,9 @@ msgstr "Datenlisten bereitstellen"
 msgid "Provide data lists to make life easier for your users"
 msgstr "Datenlisten erleichtern Anwendern die Arbeit"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:50
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:55
 msgid "Purge"
 msgstr "Bereinigen"
-
-#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:51
-msgid "Purge existing values."
-msgstr "Existierende Werte bereinigen"
 
 #: /usr/share/icingaweb2/modules/director/application/controllers/TimeperiodController.php:16
 msgid "Ranges"
@@ -1735,6 +1780,10 @@ msgstr "Erstellt in %0.2fs, ausgebracht in %0.2fs"
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaCommandArgumentForm.php:89
 msgid "Repeat key"
 msgstr "Schlüssel wiederholen"
+
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:49
+msgid "Replace"
+msgstr "Ersetzen"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaCommandArgumentForm.php:97
 #: /usr/share/icingaweb2/modules/director/application/tables/IcingaObjectDatafieldTable.php:47
@@ -1838,7 +1887,7 @@ msgstr "Servicename"
 msgid "Services"
 msgstr "Services"
 
-#: /usr/share/icingaweb2/modules/director/application/controllers/HostController.php:65
+#: /usr/share/icingaweb2/modules/director/application/controllers/HostController.php:66
 #, php-format
 msgid "Services: %s"
 msgstr "Services: %s"
@@ -1856,7 +1905,7 @@ msgstr "Keinen Wert setzen (null)"
 msgid "Set null"
 msgstr "null setzen"
 
-#: /usr/share/icingaweb2/modules/director/application/controllers/HostController.php:41
+#: /usr/share/icingaweb2/modules/director/application/controllers/HostController.php:42
 msgid "Show"
 msgstr "Zeigen"
 
@@ -1958,6 +2007,15 @@ msgstr "Gelungen"
 msgid "Suggested fields"
 msgstr "Vorgeschlagene Felder"
 
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:72
+#, php-format
+msgid ""
+"Sync only part of your imported objects with this rule. Icinga Web 2 filter "
+"syntax is allowed, so this could look as follows: %s"
+msgstr ""
+"Nur einen Teil der importierten Objekte mit dieser Regel synchronisieren. "
+"Die Icinga Web 2 Filter Syntax kann verwendet werden. z.B: %s"
+
 #: /usr/share/icingaweb2/modules/director/application/controllers/SyncruleController.php:95
 msgid "Sync properties: "
 msgstr "Synchronisationseigenschaften: "
@@ -2014,8 +2072,8 @@ msgstr ""
 msgid "The argument %s has successfully been stored"
 msgstr "Das Argument %s wurde erfolgreich gespeichert"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:29
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaObjectFieldForm.php:115
+#: /usr/share/icingaweb2/modules/director/application/forms/DirectorDatafieldForm.php:29
 msgid "The caption which should be displayed"
 msgstr "Die Beschriftung, die angezeigt werden soll"
 
@@ -2189,10 +2247,6 @@ msgstr ""
 "geschriebenes) Icinga Web 2 Modul diese Funktionalität nachrüsten, da "
 "Importquellen als Hook in Director realisiert werden"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:61
-msgid "This allows to filter for specific parts"
-msgstr "Erlaubt das Filtern nach spezifischen Teilen"
-
 #: /usr/share/icingaweb2/modules/director/application/forms/SyncPropertyForm.php:152
 msgid ""
 "This allows to filter for specific parts within the given source expression. "
@@ -2206,7 +2260,7 @@ msgstr ""
 "setzen, bei denen die Host Eigenschaft mit \"www\" beginnt. Komplexes "
 "Beispiel: host=www*&!(address=127.*|address6=::1)"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:198
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:197
 msgid "This has to be a MySQL or PostgreSQL database"
 msgstr "Muss eine MySQL oder PostgeSQL Datenbank sein"
 
@@ -2329,7 +2383,7 @@ msgstr "Baum"
 msgid "Unable to fetch data: %s"
 msgstr "Daten konnten nicht geholt werden: %s"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:265
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:264
 #, php-format
 msgid "Unable to store the configuration to \"%s\""
 msgstr "Konfiguration kann nicht nach \"%s\" gespeichert werden"
@@ -2542,10 +2596,6 @@ msgid ""
 msgstr ""
 "Soll das Kommando für diesen Service auf dem Icinga-Agent ausgeführt werden?"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:40
-msgid "Whether the field should be merged, replaced or ignored"
-msgstr "Soll das Feld zusammengeführt, ersetzt oder ignoriert werden?"
-
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaHostForm.php:67
 msgid ""
 "Whether the parent (master) node should actively try to connect to this agent"
@@ -2614,6 +2664,16 @@ msgstr "Sollen Event-Handler für dieses Objekt aktiviert werden?"
 msgid "Whether to process performance data provided by this object"
 msgstr "Sollen Performancedaten von diesem Objekt verarbeitet werden?"
 
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:57
+msgid ""
+"Whether to purge existing objects. This means that objects of the same type "
+"will be removed from Director in case they no longer exist at your import "
+"source."
+msgstr ""
+"Sollen existierende Objekte entfernt werden? Das bedeutet, dass Objekte "
+"desselben Typs aus dem Director entfernt werden, falls sie in der "
+"Importquelle nicht mehr vorhanden sein sollten."
+
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:1215
 msgid "Whether to send notifications for this object"
 msgstr "Sollen Benachrichtigungen für dieses Objekt verschickt werden?"
@@ -2648,6 +2708,7 @@ msgid "YES, please delete \"%s\""
 msgstr "JA, bitte \"%s\" löschen"
 
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaZoneForm.php:30
+#: /usr/share/icingaweb2/modules/director/application/forms/SyncRuleForm.php:63
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:669
 msgid "Yes"
 msgstr "Ja"
@@ -2737,7 +2798,7 @@ msgstr "z.B. 5%, $hostname$, $lower$%:$upper$%"
 msgid "has changes"
 msgstr "hat Änderungen"
 
-#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:203
+#: /usr/share/icingaweb2/modules/director/application/forms/KickstartForm.php:202
 #: /usr/share/icingaweb2/modules/director/library/Director/Util.php:178
 msgid "here"
 msgstr "hier"
@@ -2787,6 +2848,18 @@ msgstr "zu einer Hostgruppe"
 #: /usr/share/icingaweb2/modules/director/application/forms/IcingaServiceVarForm.php:33
 msgid "value format"
 msgstr "Wertformat"
+
+#~ msgid "Audit log"
+#~ msgstr "Revisionslog"
+
+#~ msgid "Purge existing values."
+#~ msgstr "Existierende Werte bereinigen"
+
+#~ msgid "This allows to filter for specific parts"
+#~ msgstr "Erlaubt das Filtern nach spezifischen Teilen"
+
+#~ msgid "Whether the field should be merged, replaced or ignored"
+#~ msgstr "Soll das Feld zusammengeführt, ersetzt oder ignoriert werden?"
 
 #~ msgid "Alert your users"
 #~ msgstr "Benutzer alarmieren"
