@@ -1,22 +1,22 @@
 # Icinga Web 2 - Head for multiple monitoring backends.
 # Copyright (C) 2016 Icinga Development Team
 # This file is distributed under the same license as Director Module.
-# Thomas Widhalm <widhalmt@widhalm.or.at>, 2016.
-# 
-#, fuzzy
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Director Module (1.1.0)\n"
 "Report-Msgid-Bugs-To: dev@icinga.org\n"
-"POT-Creation-Date: 2016-06-28 14:15+0200\n"
+"POT-Creation-Date: 2016-06-28 11:55+0200\n"
 "PO-Revision-Date: 2016-06-28 13:09+0200\n"
 "Last-Translator: Thomas Widhalm <widhalmt@widhalm.or.at>\n"
 "Language: de_DE\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: /usr/share/icingaweb2/modules/director/library/Director/Web/Form/DirectorObjectForm.php:611
 #, php-format
