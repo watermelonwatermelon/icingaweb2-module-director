@@ -1205,7 +1205,7 @@ abstract class IcingaObject extends DbObject implements IcingaConfigRenderer
         } elseif ($this->isApplyRule()) {
             $filename = strtolower($type) . '_apply';
         } else {
-            $filename = strtolower($type) . 's';
+            $filename = preg_replace('/cys$/', 'cies', strtolower($type) . 's');
         }
 
         $config->configFile(
@@ -2023,6 +2023,15 @@ abstract class IcingaObject extends DbObject implements IcingaConfigRenderer
             if ($this->hasProperty('service_id') && $this->service_id) {
                 $params['service'] = $this->service;
             }
+
+            if ($this->hasProperty('child_host_id') && $this->child_host_id) {
+                $params['host'] = $this->child_host;
+            }
+
+            if ($this->hasProperty('child_service_id') && $this->child_service_id) {
+                $params['service'] = $this->child_service;
+            }
+
         }
 
         return $params;
