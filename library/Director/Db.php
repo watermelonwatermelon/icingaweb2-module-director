@@ -384,6 +384,7 @@ class Db extends DbConnection
             'usergroup',
             'command',
             'timeperiod',
+            'scheduled_downtime',
             'notification',
             'apiuser',
             'endpoint',
