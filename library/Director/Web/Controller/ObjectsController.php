@@ -16,30 +16,68 @@ abstract class ObjectsController extends ActionController
         'ApiUser',
         'Zone',
         'Endpoint',
+        // 'TimePeriod',
+    );
+
+    protected $periodTypes = array(
         'TimePeriod',
+        'ScheduledDowntime',
     );
 
     public function init()
     {
         parent::init();
-
-        $tabs = $this->getTabs();
         $type = $this->getType();
 
         if (in_array(ucfirst($type), $this->globalTypes)) {
-            $ltype = strtolower($type);
-
-            foreach ($this->globalTypes as $tabType) {
-                $ltabType = strtolower($tabType);
-                $tabs->add($ltabType, array(
-                    'label' => $this->translate(ucfirst($ltabType) . 's'),
-                    'url'   => sprintf('director/%ss', $ltabType)
-                ));
-            }
-            $tabs->activate($ltype);
-
-            return;
+            return $this->prepareGlobalTabs();
         }
+
+        if (in_array(ucfirst($type), $this->periodTypes)) {
+            return $this->preparePeriodTabs();
+        }
+
+        $this->prepareObjectsTabs();
+    }
+
+    protected function preparePeriodTabs()
+    {
+        $type = $this->getType();
+        $ltype = strtolower($type);
+        $tabs = $this->getTabs();
+
+        foreach ($this->periodTypes as $tabType) {
+            $ltabType = strtolower($tabType);
+            $tabs->add($ltabType, array(
+                'label' => $this->translate(ucfirst($ltabType) . 's'),
+                'url'   => sprintf('director/%ss', $ltabType)
+            ));
+        }
+
+        $tabs->activate($ltype);
+    }
+
+    protected function prepareGlobalTabs()
+    {
+        $tabs = $this->getTabs();
+        $type = $this->getType();
+        $ltype = strtolower($type);
+
+        foreach ($this->globalTypes as $tabType) {
+            $ltabType = strtolower($tabType);
+            $tabs->add($ltabType, array(
+                'label' => $this->translate(ucfirst($ltabType) . 's'),
+                'url'   => sprintf('director/%ss', $ltabType)
+            ));
+        }
+
+        $tabs->activate($ltype);
+    }
+
+    protected function prepareObjectsTabs()
+    {
+        $tabs = $this->getTabs();
+        $type = $this->getType();
 
         /** @var IcingaObject $object */
         $object = $this->dummyObject();
@@ -231,8 +269,8 @@ abstract class ObjectsController extends ActionController
     {
         // Strip final 's' and upcase an eventual 'group'
         return preg_replace(
-            array('/group$/', '/period$/', '/argument$/', '/apiuser$/'),
-            array('Group', 'Period', 'Argument', 'ApiUser'),
+            array('/group$/', '/period$/', '/downtime$/', '/argument$/', '/apiuser$/'),
+            array('Group', 'Period', 'Downtime', 'Argument', 'ApiUser'),
             str_replace(
                 'template',
                 '',
