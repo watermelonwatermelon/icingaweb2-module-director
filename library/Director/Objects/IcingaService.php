@@ -80,6 +80,8 @@ class IcingaService extends IcingaObject
 
     protected $supportsSets = true;
 
+    protected $supportedInLegacy = true;
+
     protected $keyName = array('host_id', 'object_name');
 
     protected $prioritizedProperties = array('host_id');

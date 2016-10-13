@@ -8,6 +8,8 @@ abstract class IcingaObjectGroup extends IcingaObject
 {
     protected $supportsImports = true;
 
+    protected $supportedInLegacy = true;
+
     protected $defaultProperties = array(
         'id'                    => null,
         'object_name'           => null,
