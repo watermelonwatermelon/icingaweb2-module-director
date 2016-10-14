@@ -1893,9 +1893,14 @@ abstract class IcingaObject extends DbObject implements IcingaConfigRenderer
         }
     }
 
+    protected function getLegacyObjectType()
+    {
+        return strtolower($this->getType());
+    }
+
     protected function renderLegacyObjectHeader()
     {
-        $type = strtolower($this->getType());
+        $type = $this->getLegacyObjectType();
 
         if ($this->isTemplate()) {
             $name = c1::renderKeyValue(
