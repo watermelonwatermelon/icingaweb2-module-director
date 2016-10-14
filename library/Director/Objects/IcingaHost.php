@@ -6,6 +6,7 @@ use Icinga\Data\Db\DbConnection;
 use Icinga\Exception\NotFoundError;
 use Icinga\Module\Director\Db;
 use Icinga\Module\Director\IcingaConfig\IcingaConfig;
+use Icinga\Module\Director\IcingaConfig\IcingaLegacyConfigHelper as c1;
 use Icinga\Module\Director\Web\Form\DirectorObjectForm;
 
 class IcingaHost extends IcingaObject
@@ -329,6 +330,11 @@ class IcingaHost extends IcingaObject
     {
         // @codingStandardsIgnoreEnd
         return '';
+    }
+
+    protected function renderLegacyDisplay_Name()
+    {
+        return c1::renderKeyValue('display_name', $this->display_name);
     }
 
     public static function loadWithApiKey($key, Db $db)
