@@ -3,6 +3,7 @@
 namespace Icinga\Module\Director\CustomVariable;
 
 use Icinga\Module\Director\IcingaConfig\IcingaConfigHelper as c;
+use Icinga\Module\Director\IcingaConfig\IcingaLegacyConfigHelper as c1;
 
 class CustomVariableString extends CustomVariable
 {
@@ -39,5 +40,10 @@ class CustomVariableString extends CustomVariable
     public function toConfigString()
     {
         return c::renderString($this->getValue());
+    }
+
+    public function toLegacyConfigString()
+    {
+        return c1::renderString($this->getValue());
     }
 }
