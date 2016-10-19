@@ -50,6 +50,8 @@ class IndexController extends ActionController
             } catch (Exception $e) {
             }
         }
+
+        $this->view->legacyConfig = $this->IcingaConfig()->isLegacy();
     }
 
     protected function fetchSyncState()

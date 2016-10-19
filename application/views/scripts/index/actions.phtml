@@ -3,7 +3,7 @@
 <?php foreach ($actions as $a): ?>
 <li>
   <a<?php
-if (array_key_exists(4, $a)) {
+if (array_key_exists(4, $a) && $a[4]) {
   echo ' class="state-' . $a[4] . '"';
 }
 ?> href="<?= $this->url($a[2]) ?>">

@@ -89,6 +89,11 @@ if ($this->migrationsForm) {
     echo $this->migrationsForm;
 }
 
+$legacyClass = null;
+if ($this->legacyConfig === true) {
+    $legacyClass = 'legacy';
+}
+
 $all = array(
     $this->translate('Define whatever you want to be monitored') => array(
         array(
@@ -113,13 +118,15 @@ $all = array(
             'users',
             $this->translate('Users / Contacts'),
             'director/users',
-            statSummary($this, 'user')
+            statSummary($this, 'user'),
+            $legacyClass
         ),
         array(
             'megaphone',
             $this->translate('Notifications'),
             'director/notifications',
-            $this->translate('Schedule your notifications.') . ' ' . statSummary($this, 'notification')
+            $this->translate('Schedule your notifications.') . ' ' . statSummary($this, 'notification'),
+            $legacyClass
         ),
         array(
             'calendar',
@@ -147,7 +154,8 @@ $all = array(
             'lock-open-alt',
             $this->translate('Api users'),
             'director/apiusers',
-            statSummary($this, 'apiuser')
+            statSummary($this, 'apiuser'),
+            $legacyClass
         ),
         array(
             'cloud',
@@ -158,7 +166,7 @@ $all = array(
                 $this->hasDeploymentEndpoint ? '' : '. ' .
                 $this->translate('None could be used for deployments right now')
             ),
-            $this->hasDeploymentEndpoint ? '' : 'critical'
+            $this->hasDeploymentEndpoint ? $legacyClass : 'critical'
         ),
         array(
             'globe',
