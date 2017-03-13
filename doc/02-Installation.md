@@ -51,7 +51,7 @@ In case you prefer automated configuration, you should check the dedicated
 
 ### Create a Database resource
 
-In your web frontend please go to `Configuration / Application / Resources`
+In your web frontend, please go to `Configuration / Application / Resources`
 and create a new database resource pointing to your newly created database.
 Please make sure that you choose `utf8` as an encoding.
 
@@ -59,7 +59,7 @@ Please make sure that you choose `utf8` as an encoding.
 ### Install the Director module
 
 As with any Icinga Web 2 module, installation is pretty straight-forward. In
-case you're installing it from source all you have to do is to drop the director
+case you're installing it from source, all you have to do is to drop the director
 module in one of your module paths. You can examine (and set) the module path(s)
 in `Configuration / Application`. In a typical environment you'll probably drop the
 module to `/usr/share/icingaweb2/modules/director`. Please note that the directory
@@ -69,6 +69,6 @@ name MUST be `director` and not `icingaweb2-module-director` or anything else.
 ### Run the graphical kickstart wizard
 
 Now go to your web frontend, Configuration, Modules, director - and enable the
-module. Choose either Director directly from the menu or got to the Configuration
-tab. Either way you'll reach the kickstart wizards. Follow the instructions and
+module. Choose either Director directly from the menu or go to the Configuration
+tab. Either way, you'll reach the kickstart wizards. Follow the instructions and
 you're all done!
